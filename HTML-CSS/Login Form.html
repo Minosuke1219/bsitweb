@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Baranggay Minuyan III
+	</title>
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="Login-Form-Style.css">
+	<!-- CSS only -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://kit.fontawesome.com/f642d978ea.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script type="text/javascript">
+		AOS.init();
+	</script>
+
+	<section id="header">
+	<img src="image/wave.png" class="header-img">
+	</section>
+
+
+<section id="LoginForm">
+	<div class="container ">
+		<div class="column text-justify">
+			<div class="content-space">
+
+			<div class="Whole-form">
+
+    		<div class=" imgcontainer">
+      		<img src="image/logo-converted.png" alt="logo" class="logo">
+
+    		</div>
+    				<div class="col-md-12">
+    				<label for="uname" class="user"><b>Username</b></label>
+      				<input type="text" placeholder="Enter Username" name="uname" required class="user-input">
+    				</div>
+
+
+  					<div class="col-md-12">
+  					<label for="psw" class="pass"><b>Password</b></label>
+      				<input type="password" placeholder="Enter Password" name="psw" required class="pass-input">
+  					</div>
+
+  					<div class="col-md-12">
+  					<label for="psw" class="pass"><b>Login as</b></label>
+  					<br>
+  					<select id="select-id" name="select-id" class="Choice">
+					<option value="Barangay Captain.html" target="_self">Barangay Captain</option>
+					<option value="Main Site Edit.html" target="_self">Admin Staff</option>
+					<option value="Treasurer.html" target="_self">Treasurer</option>
+					</select>
+  					</div>
+
+
+   					<div class="col-md-12">
+   					<button id="SubmitChoice" type="submit" class="submit"><p class="login" target="_self">Login</p></button>
+   					</div>
+
+
+
+
+			</div>
+				
+			</div>
+
+
+		</div>
+	</div>
+</section>
+
+
+<!---------------------------Footer-Section------------------------------->
+<section id="footer">
+	<img src="D:\Documents\Dito mo save school stuff mo\BSIT 3KG1\System Analysis and Design\Website\IMAGES\wave2.png" class="footer-img">
+</section>
+
+<!---------------------Smooth-Scroll-------------------------->
+<script src="Smooth-Scroll.js"></script>
+<script>
+	var scroll = new SmoothScroll('a[href*="#"]');
+</script>
+
+<!-----------------------Submit-Choice-------------------------------->
+<script type="text/javascript">
+$("#SubmitChoice").on("click", function(){
+  //get selected option value
+  var option =  $('#select-id').find('option:selected').attr('value');
+  console.log(option)
+   //redirect to that link
+  var strWindowFeatures = "";
+  var URL = option;
+  var win = window.open(URL, "_self", strWindowFeatures);
+})
+</script>
+
+
+</body>
+</html>
